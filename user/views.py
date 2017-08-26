@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.views.generic import FormView
 from user.forms import SignUpForm,SettingsForm,PasswordForm
 from django.contrib.auth import update_session_auth_hash
+from django.http import HttpResponse
+
 
 def signup(request):
     if request.method == 'POST':
@@ -42,9 +44,11 @@ class UpdatePasswordView(FormView):
     def form_valid(self,form):
         data = super(UpdatePasswordView,self).form_valid(form)
         form = form.cleaned_data
-        if(form['password'] == form['password_confirm']):
-            self.request.user.set_password(form['password'])
+        if(self.request.user.password == form['password']):
+            self.request.user.set_password(form['password_confirm'])
             self.request.user.save()
             update_session_auth_hash(self.request, self.request.user)
             login(self.request, self.request.user)
+        else :
+            HttpResponse("invalid password")
         return data

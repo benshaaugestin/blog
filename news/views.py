@@ -1,13 +1,14 @@
 from django.views import generic
 from .models import News,Category
 from faker import Factory
-
+from django.http import HttpResponse
+import datetime
 
 
 class IndexView(generic.ListView):
     template_name = 'news/index.html'
     context_object_name = 'latest_news_list'
-    paginate_by = 3
+    paginate_by = 20
 
     def get_queryset(self):
         return News.objects.all()
@@ -52,6 +53,20 @@ class SearchResultView(generic.ListView):
         return News.objects.filter(title__icontains = self.request.GET['searchitem'])
 
 
+def rand(request, num):
+    r = Factory.create()
+
+    n = 45
+    while (n > 0):
+        q = News()
+        q.title = "%s%s%s" % (r.name(), r.name(), r.name())
+        q.author = "%s" % r.name()
+        q.category = Category.objects.get(id=num)
+        q.content = r.text()
+        q.pub_date =datetime.datetime.today()
+        q.save()
+        n -= 1
+    return HttpResponse("Done")
 
 
 
