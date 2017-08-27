@@ -22,7 +22,7 @@ SECRET_KEY = '0r-n9dj7vhcf+_dw3s$+g!!v#y+t!w$vv*qe-92bcho8^qb)id'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost","sayonenews.herokuapp"]
+ALLOWED_HOSTS = ["127.0.0.1","localhost","sayonenews.herokuapp.com"]
 
 
 # Application definition
