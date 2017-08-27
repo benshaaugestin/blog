@@ -1,9 +1,12 @@
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
-from user.forms import SignUpForm,SettingsForm,PasswordForm
+from user.forms import SignUpForm,SettingsForm
 from django.contrib.auth import update_session_auth_hash
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.contrib.auth.forms import PasswordChangeForm
 
 
 def signup(request):
@@ -35,20 +38,20 @@ class UpdateView(FormView):
             self.request.user.save()
         return ret
 
-
-class UpdatePasswordView(FormView):
-    template_name = 'user/update_password.html'
-    form_class = PasswordForm
-    success_url = '/'
-
-    def form_valid(self,form):
-        data = super(UpdatePasswordView,self).form_valid(form)
-        form = form.cleaned_data
-        if(self.request.user.password == form['password']):
-            self.request.user.set_password(form['password_confirm'])
-            self.request.user.save()
-            update_session_auth_hash(self.request, self.request.user)
-            login(self.request, self.request.user)
-        else :
-            HttpResponse("invalid password")
-        return data
+#change password
+@login_required(login_url='/')
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('/')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'user/update_password.html', {
+        'form': form
+    })

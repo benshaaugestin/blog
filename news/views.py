@@ -46,7 +46,7 @@ class SearchResultView(generic.ListView):
     model = News
     template_name = 'news/search_result.html'
     context_object_name = 'news'
-    paginate_by = 3
+    paginate_by = 40
 
 
     def get_queryset(self,*args,**kwargs):

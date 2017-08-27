@@ -37,11 +37,3 @@ class SettingsForm(forms.Form):
         model = User
         fields = ('first_name', 'last_name', 'email' )
 
-
-class PasswordForm(forms.Form):
-    password = forms.CharField(min_length=4, required=True, help_text='Min 4 charactors.')
-    password_confirm = forms.CharField(min_length=4, required=False, help_text='Same as Above.')
-
-    class Meta:
-        model = User
-        fields = ('password', 'password_confirm' )

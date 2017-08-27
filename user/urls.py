@@ -7,8 +7,9 @@ urlpatterns = [
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
+
     url(r'^profile/$', login_required(views.UpdateView.as_view()), name='profile'),
-    url(r'^setpassword/', login_required( views.UpdatePasswordView.as_view()), name='set_password'),
+    url(r'^setpassword/', views.change_password, name='set_password'),
 
 
     url(r'^oauth/', include('social_django.urls', namespace='social')),

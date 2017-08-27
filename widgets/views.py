@@ -104,3 +104,4 @@ class CommentsView(generic.DetailView):
     model = News
     context_object_name = 'news'
 
+
