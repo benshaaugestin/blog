@@ -26,18 +26,16 @@
 <body>
 	<div class="row">
 
-		<div class="col-md-12 col-xs-12 afix">
+		<div class="col-md-12 afix">
 
 			<nav class="navbar navbar-inverse" data-spy="affix">
-				<div class="col-md-12 col-xs-12">
+				<div class="col-md-12">
 
 					<div class="navbar-header">
 						<a class="navbar-brand" href="{%url 'news:index' %}">The News Reporter</a>
 					</div>
 					<ul class="nav navbar-nav">
-<!--
 						<li class="active"><a href="{%url 'news:index' %}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
--->
 
 						{% if user.is_authenticated %}
 						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile <span class="caret"></span></a>

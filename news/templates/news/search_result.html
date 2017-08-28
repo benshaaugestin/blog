@@ -16,7 +16,6 @@
             <p>No news are available.</p>
         {% endif %}
         {% if is_paginated %}
-        <div class="row">
             <ul class="pagination">
                 {% if page_obj.has_previous %}
                     <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
@@ -36,7 +35,6 @@
                     <li class="disabled"><span>&raquo;</span></li>
                 {% endif %}
             </ul>
-            </div>
         {% endif %}
     </div>
 </div>
