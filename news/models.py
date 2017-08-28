@@ -30,7 +30,7 @@ class News(models.Model):
         verbose_name_plural ="News"
 
     def get_absolute_url(self):
-        return reverse('news:detail',kwargs={'pk':self.pk})
+        return reverse('news:detail', kwargs={'pk':self.pk})
 
     def __str__(self):
         return self.title

@@ -4,6 +4,8 @@
 {% block content %}
 {% load comments %}
 <head>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <style>
         #comment_form {
                     margin: 20px 400px 20px 20px ;
@@ -28,17 +30,16 @@
 
     </ul>
     <!--Pulling Awesome Font -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-
     			<div class="col-md-12">
-                    <ul class="social-network social-circle">
-                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//sayonenews.herokuapp.com/{{get_absolute_url}}" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/home?status=https%3A//sayonenews.herokuapp.com/{{get_absolute_url}}" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/share?url=https%3A//sayonenews.herokuapp.com/{{get_absolute_url}}" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//sayonenews.herokuapp.com&title=&summary=&source=" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
+                    <div class="social-network social-circle">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//sayonenews.herokuapp.com{{ news.get_absolute_url }}" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/home?status=https%3A//sayonenews.herokuapp.com{{ news.get_absolute_url }}" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://plus.google.com/share?url=https%3A//sayonenews.herokuapp.com{{ news.get_absolute_url }}" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//sayonenews.herokuapp.com{{ news.get_absolute_url }}&title=&summary=&source=" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                    </div>
 				</div>
+
+
 
 
 </div>
