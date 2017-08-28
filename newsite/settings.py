@@ -192,7 +192,7 @@ EMAIL_PORT = 587
 # EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 
 EMAIL_HOST_USER = 'cenpaul77@gmail.com'
-EMAIL_HOST_PASSWORD = 'admintestmail'
+EMAIL_HOST_PASSWORD = 'dgangoadmin'
 
 
 EMAIL_USE_TLS = True

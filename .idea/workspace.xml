@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a165edc-4562-475b-b0df-fb99ea06ab30" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news/templates/news/home.html" afterPath="$PROJECT_DIR$/news/templates/news/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news/templates/news/search_result.html" afterPath="$PROJECT_DIR$/news/templates/news/search_result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news/views.py" afterPath="$PROJECT_DIR$/news/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/forms.py" afterPath="$PROJECT_DIR$/user/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/templates/user/update_password.html" afterPath="$PROJECT_DIR$/user/templates/user/update_password.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/urls.py" afterPath="$PROJECT_DIR$/user/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/views.py" afterPath="$PROJECT_DIR$/user/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/templates/widgets/contact.html" afterPath="$PROJECT_DIR$/widgets/templates/widgets/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/templates/widgets/rend.html" afterPath="$PROJECT_DIR$/widgets/templates/widgets/rend.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/templates/widgets/subscribe.html" afterPath="$PROJECT_DIR$/widgets/templates/widgets/subscribe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/views.py" afterPath="$PROJECT_DIR$/widgets/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsite/settings.py" afterPath="$PROJECT_DIR$/newsite/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,8 +67,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/newsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="178" column="11" lean-forward="false" selection-start-line="178" selection-start-column="11" selection-end-line="178" selection-end-column="11" />
+            <state relative-caret-position="238">
+              <caret line="187" column="29" lean-forward="true" selection-start-line="187" selection-start-column="29" selection-end-line="187" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -100,7 +88,6 @@
         <option value="$PROJECT_DIR$/user/templates/registration/pswd_reset_complete.html" />
         <option value="$PROJECT_DIR$/procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/newsite/settings.py" />
         <option value="$PROJECT_DIR$/user/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/user/forms.py" />
         <option value="$PROJECT_DIR$/user/templates/user/update_password.html" />
@@ -113,6 +100,7 @@
         <option value="$PROJECT_DIR$/widgets/templates/widgets/rend.html" />
         <option value="$PROJECT_DIR$/widgets/views.py" />
         <option value="$PROJECT_DIR$/news/templates/news/home.html" />
+        <option value="$PROJECT_DIR$/newsite/settings.py" />
       </list>
     </option>
   </component>
@@ -588,8 +576,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/newsite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="178" column="11" lean-forward="false" selection-start-line="178" selection-start-column="11" selection-end-line="178" selection-end-column="11" />
+        <state relative-caret-position="238">
+          <caret line="187" column="29" lean-forward="true" selection-start-line="187" selection-start-column="29" selection-end-line="187" selection-end-column="29" />
           <folding />
         </state>
       </provider>
