@@ -196,3 +196,6 @@ EMAIL_HOST_PASSWORD = 'sayone123'
 
 
 EMAIL_USE_TLS = True
+
+MEDIA_URL = '/src/'
+MEDIA_ROOT= os.path.join(PROJECT_ROOT,'mediafiles')

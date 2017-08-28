@@ -3,6 +3,9 @@ from django.dispatch import receiver
 from django.db import models
 from django.contrib.auth.models import User, AbstractUser
 from django.shortcuts import reverse
+from django.core.files.storage import FileSystemStorage
+
+
 
 
 class Category(models.Model):
@@ -20,9 +23,11 @@ class News(models.Model):
     author=models.CharField(max_length=200)
     category = models.ForeignKey(Category,on_delete=models.CASCADE ,blank=True, null=True)
     pub_date = models.DateTimeField()
+    photo = models.ImageField(upload_to='src/' ,blank=True, null=True)
 
     class Meta:
         ordering = ["-pub_date"]
+        verbose_name_plural ="News"
 
     def get_absolute_url(self):
         return reverse('news:detail',kwargs={'pk':self.pk})

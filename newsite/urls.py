@@ -21,6 +21,9 @@ from django.views.generic import TemplateView
 from django.contrib.sitemaps.views import sitemap
 from news.sitemaps import NewsSitemap,CategorySitemap
 from django.contrib.flatpages.views import flatpage
+from django.conf.urls.static import static
+from . import settings
+
 
 # Your other patterns here
 sitemaps= {'news':NewsSitemap,'category':CategorySitemap}
@@ -36,4 +39,6 @@ urlpatterns = [
     url(r'^robots.txt$', TemplateView.as_view(template_name="robots.txt", content_type="text/plain"), name="robots_file"),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

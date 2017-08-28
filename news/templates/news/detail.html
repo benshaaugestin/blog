@@ -22,6 +22,8 @@
     <ul list-style-type="none">
         <li><h2>{{ news.title }}</h2></li>
         <li><p>{{ news.content }}</p></li>
+        <img src="{{ news.photo.url }}" alt="Pic 01"/>
+
     </ul>
     {% post_to_facebook news.news_id %}
     {% post_to_gplus www.google.com %}
