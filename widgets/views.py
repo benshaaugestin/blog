@@ -100,7 +100,7 @@ def contactView(request):
 
 
 class CommentsView(generic.DetailView):
-    template_name = 'widgets/rend.html'
+    template_name = 'widgets/comment.html'
     model = News
     context_object_name = 'news'
 

@@ -39,7 +39,11 @@ class CategoryView(generic.ListView):
         else:
             return self.model._default_manager.all()
 
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        pk = self.kwargs.get('pk', 1)
+        context['pgcategory'] = self.model.objects.get(pk=int(pk))
+        return context
 
 
 class SearchResultView(generic.ListView):
