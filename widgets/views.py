@@ -41,7 +41,7 @@ class AddToSubscriptionList(FormView) :
                     """ Hey User, This email ( %s ) have been requested to subscribe in our News Channel, \
                     if You are Interested Please Activate through this link :  \
                     \
-                        127.0.0.1:8000/widgets/activate/%s/    \
+                        sayonenews.herokuapp.com/widgets/activate/%s/    \
                     \
                     From The News Reporter.com
                     """ % (s.email, s.token),
